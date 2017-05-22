@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.fixer.io/latest?base=USD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.13.5
+      Date:
+      - Sat, 14 Oct 2017 22:41:14 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '447'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - public, must-revalidate, max-age=900
+      Last-Modified:
+      - Fri, 13 Oct 2017 00:00:00 GMT
+      Vary:
+      - Origin
+      X-Content-Type-Options:
+      - nosniff
+    body:
+      encoding: UTF-8
+      string: '{"base":"USD","date":"2017-10-13","rates":{"AUD":1.2769,"BGN":1.6561,"BRL":3.1767,"CAD":1.2499,"CHF":0.97655,"CNY":6.5903,"CZK":21.857,"DKK":6.3031,"GBP":0.75343,"HKD":7.8078,"HRK":6.3577,"HUF":261.34,"IDR":13496.0,"ILS":3.4994,"INR":64.955,"JPY":112.18,"KRW":1129.5,"MXN":18.957,"MYR":4.2195,"NOK":7.9077,"NZD":1.4006,"PHP":51.423,"PLN":3.6033,"RON":3.8836,"RUB":57.68,"SEK":8.1329,"SGD":1.3559,"THB":33.12,"TRY":3.66,"ZAR":13.383,"EUR":0.84674}}'
+    http_version: 
+  recorded_at: Sat, 14 Oct 2017 22:41:14 GMT
+recorded_with: VCR 3.0.3

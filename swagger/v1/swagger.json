@@ -1,0 +1,200 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/products": {
+      "post": {
+        "summary": "Creates a product",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "product",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "auth_token": {
+                  "type": "string",
+                  "default": "auth_token"
+                },
+                "device_token": {
+                  "type": "string",
+                  "default": "device_token"
+                },
+                "store_id": {
+                  "type": "string",
+                  "default": "992625902"
+                },
+                "app_url": {
+                  "type": "string",
+                  "default": "https://itunes.apple.com/us/app/let-me-focus/id1197355361?mt=8"
+                }
+              },
+              "required": [
+                "auth_token",
+                "device_token",
+                "store_id"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Product created"
+          }
+        }
+      },
+      "get": {
+        "summary": "Lists user products",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "auth_token",
+            "in": "query",
+            "type": "string",
+            "default": "auth_token"
+          },
+          {
+            "name": "device_token",
+            "in": "query",
+            "type": "string",
+            "default": "device_token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User products listed"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Removes target product",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "auth_token",
+            "in": "query",
+            "type": "string",
+            "default": "auth_token"
+          },
+          {
+            "name": "device_token",
+            "in": "query",
+            "type": "string",
+            "default": "device_token"
+          },
+          {
+            "name": "store_id",
+            "in": "query",
+            "type": "string",
+            "default": "store_id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Target product removed"
+          }
+        }
+      }
+    },
+    "/api/users": {
+      "post": {
+        "summary": "Creates a user",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "auth_token": {
+                  "type": "string",
+                  "default": "auth_token"
+                },
+                "device_token": {
+                  "type": "string",
+                  "default": "device_token"
+                },
+                "sandbox": {
+                  "type": "boolean",
+                  "default": "false"
+                },
+                "store_country": {
+                  "type": "string",
+                  "default": "US"
+                },
+                "timezone": {
+                  "type": "string",
+                  "default": "Europe/Berlin"
+                }
+              },
+              "required": [
+                "auth_token",
+                "device_token",
+                "sandbox",
+                "store_country",
+                "timezone"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "User created"
+          }
+        }
+      },
+      "put": {
+        "summary": "Updates a user",
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "auth_token": {
+                  "type": "string",
+                  "default": "auth_token"
+                },
+                "device_token": {
+                  "type": "string",
+                  "default": "device_token"
+                },
+                "device_push_token": {
+                  "type": "string",
+                  "default": "device_push_token"
+                }
+              },
+              "required": [
+                "auth_token",
+                "device_token",
+                "device_push_token"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User updated"
+          }
+        }
+      }
+    }
+  }
+}

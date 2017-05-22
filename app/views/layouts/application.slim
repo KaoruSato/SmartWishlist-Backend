@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title #{@page_title}
+    meta name="apple-itunes-app" content="app-id=1239519423, affiliate-data=1001lxGu"
+    meta name="viewport" content="width=device-width"
+    meta name="description" content="#{@page_description}"
+    meta property="og:description" content="#{@page_description}"
+    meta property="og:title" content="#{@page_title}"
+    meta property="og:image" content="#{@page_image}"
+    meta property="og:site_name" content="Smart Wishlist - Best App Deals for iOS"
+    meta property="og:type" content="website"
+
+    link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"
+    link rel="icon" href="/favicon.ico" type="image/x-icon"
+
+    = stylesheet_link_tag "application", media: 'all'
+    = csrf_meta_tags
+
+  body
+    span.data-source data-appstore-button="#{@app_store_button}" data-api-url="#{@api_url}"
+    .container.js-data data-controller="#{@controller}" data-action="#{@action}"
+      = yield
+    = javascript_include_tag "application"
+    = javascript_pack_tag 'application'

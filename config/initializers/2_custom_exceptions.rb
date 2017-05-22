@@ -1,0 +1,5 @@
+API::AuthenticationError  = Class.new(StandardError)
+API::StoreNetworkError    = Class.new(StandardError)
+API::NotFoundByStoreId    = Class.new(StandardError)
+API::CountryStoreNotFound = Class.new(StandardError)
+API::FreeLimitReached = Class.new(StandardError)

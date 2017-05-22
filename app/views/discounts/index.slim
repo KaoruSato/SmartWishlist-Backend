@@ -1,0 +1,10 @@
+.top-25
+= link_to "Home", root_path, class: 'btn btn-primary no-underline bright-color discounts-home-button'
+a href="#{@app_store_link}" target='_blank'
+  = image_tag "app_store_button.svg", width: "120px", class: 'discounts-store-button'
+a href="#{@app_store_link}" target='_blank'
+  = image_tag "wishlist-icon.png", height: "35px", class: 'discounts-app-icon'
+
+div.text-center
+  h1.text-muted Currently discounted
+  div id='react-table'

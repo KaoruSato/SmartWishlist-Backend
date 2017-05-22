@@ -1,0 +1,24 @@
+discount_check_scheduler:
+  cron: "0 */2 * * *"
+  class: "User::RecurringCheckWorker"
+  queue: default
+notification_sender:
+  cron: "10 */1 * * *"
+  class: "NotificationSenderJob"
+  queue: critical
+discount_prices_updater:
+  cron: "0 21 * * *"
+  class: "Discount::PricesUpdater"
+  queue: default
+stale_discounts_updater:
+  cron: "*/15 * * * *"
+  class: "Product::StaleDiscountCheckScheduler"
+  queue: default
+update_sitemap:
+   cron: "0 22 * * *"
+   class: "SitemapUpdater"
+   queue: default
+update_promotions_cache:
+   cron: "*/30 * * * *"
+   class: "CacheUpdaterJob"
+   queue: default

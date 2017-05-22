@@ -1,0 +1,41 @@
+script type="application/ld+json"
+  | {
+  | "@context": "http://schema.org",
+  | "@type": "SoftwareApplication",
+  | "name": "#{@product.fetch(:name)}",
+  | "operatingSystem": "iOS",
+  | "applicationCategory": "http://schema.org/SoftwareApplication",
+  | "aggregateRating": {
+  | "@type": "AggregateRating",
+  | "ratingValue": "#{@product.fetch(:average_user_rating)}",
+  | "ratingCount": "#{@product.fetch(:user_rating_count)}"
+  | },
+  | "offers": {
+  | "@type": "Offer",
+  | "price": "#{@product.fetch(:current_price)}",
+  | "priceCurrency": "USD"
+  | }
+  | }
+
+.top-25
+= link_to "Home", root_path, class: 'btn btn-primary btn-lg no-underline bright-color discounts-home-button right-20'
+= link_to "All discounts", discounts_path, class: 'btn btn-primary btn-lg no-underline bright-color discounts-home-button'
+
+.content-section-a.top-25.discount-details
+  .container
+    .row
+      .col-lg-6.col-sm-6.text-center
+        div.bottom-5
+          img.app-icon src="#{@product.fetch(:big_icon_url)}" alt="#{@product.fetch(:name)} icon"
+        div.btn-group.top-5 role="group"
+          div.btn.btn-default.btn-lg.no-click Now #{ @product.fetch(:current_price_formatted) }
+          div.btn.btn-default.btn-lg.no-click from #{ @product.fetch(:base_price_formatted) }
+        div.top-5
+          a href="#{@product.fetch(:store_url)}" target='_blank'
+            = image_tag "app_store_button.svg", width: "40%", class: 'discounts-store-button', alt: "#{@product.fetch(:name)} App Store button"
+      .col-lg-6.col-sm-6
+        h1.section-heading.text-muted
+          | #{@show_title}
+        .lead
+          i #{ simple_format @product.fetch(:description)}
+        .bottom-20

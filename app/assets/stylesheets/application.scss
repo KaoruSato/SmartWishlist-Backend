@@ -1,0 +1,180 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require discounts
+ *= require_self
+ */
+
+html {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+$label-info-bg: #337ab7;
+
+@import 'slick';
+@import 'slick-theme';
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.important-text {
+  font-size: 30px;
+  color: #777;
+}
+
+.bold-text {
+  font-weight: 500;
+}
+
+a.no-underline {
+  text-decoration: none;
+}
+
+a.bright-color {
+  color: #ffffff;
+}
+
+.top-25 {
+  padding-top: 25px;
+}
+
+.bottom-5 {
+  padding-bottom: 5px;
+}
+
+.bottom-25 {
+  padding-bottom: 25px;
+}
+
+.top-5 {
+  padding-top: 5px;
+}
+
+.top-10 {
+  padding-top: 10px;
+}
+
+.right-20 {
+  margin-right: 20px;
+}
+
+.discount-details {
+  .app-icon {
+    width: 70%;
+    height: 70%;
+    border-radius: 30px;
+  }
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+}
+
+
+.slick-prev:before, .slick-next:before {
+  font-family: "slick";
+  font-size: 25px;
+  line-height: 1;
+  color: #000;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slider {
+  padding: 0px 3px 0px 3px;
+}
+
+.left {
+  float: left;
+}
+
+.store-btn {
+  margin-top: 2px;
+  display: inline;
+  float: left;
+}
+
+.app-details {
+  padding-top: 7px;
+}
+
+.bottom-btn {
+  margin-top: 2px;
+  margin-left: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.app-bottom {
+  display: inline;
+}
+
+.round {
+  border-radius: 20px;
+}
+
+.no-click {
+  pointer-events: none;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.top-20 {
+  padding-top: 20px;
+}
+
+.bottom-20 {
+  padding-bottom: 20px;
+}
+
+.bottom-5 {
+  padding-bottom: 5px;
+}
+
+.clear {
+  clear: both;
+}
+
+.app-card {
+  width: 25em;
+  margin-top: 0px;
+  padding-top: 15px;
+  float: left;
+}
+
+.media-left {
+  padding-right: 3px;
+}
+
+.app-icon {
+  width: 92px;
+  height: 92px;
+}
+
+.app-name-input {
+  margin-top: 5px;
+  border-radius: 4px !important;
+}
+
+.col-centered{
+    margin: 0 auto;
+    float: none;
+}
+
+.badge.badge-danger {
+  background-color: #ee3e10;
+}
+

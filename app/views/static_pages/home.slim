@@ -1,0 +1,81 @@
+script type="application/ld+json"
+  | {
+  | "@context": "http://schema.org",
+  | "@type": "SoftwareApplication",
+  | "name": "Smart Wishlist Best App Deals",
+  | "operatingSystem": "iOS",
+  | "applicationCategory": "http://schema.org/SoftwareApplication",
+  | "aggregateRating": {
+  | "@type": "AggregateRating",
+  | "ratingValue": "5.0",
+  | "ratingCount": "11"
+  | },
+  | "offers": {
+  | "@type": "Offer",
+  | "price": "0.0",
+  | "priceCurrency": "USD"
+  | }
+  | }
+
+.header.clearfix
+  h1.text-muted.text-center
+    | Smart Wishlist iOS
+  h2.text-muted.text-center
+    | Buy Cheaper Apps on the App Store
+.row
+  .col-lg-3.col-sm-0
+  .col-lg-6.col-sm-12.text-center
+    = image_tag "wishlist-icon.png", width: "50%", alt: "Smart Wishlist iOS app icon"
+    br
+    div.top-10
+    a href="https://twitter.com/apps_wishlist" target='_blank'
+      = image_tag "twitter-icon.png", class: 'social-icon', alt: "Smart Wishlist on Twitter"
+  .col-lg-3.col-sm-0
+br/
+.row.text-center
+  .col-lg-3.col-sm-0
+  .col-lg-6.col-sm-12.text-center
+    p.important-text
+      span> So far we've tracked
+      span.bold-text.label.label-info> = "$#{@total_usd_value}"
+      span> worth of discounts for
+      span.bold-text.label.label-info> = @unique_apps_count
+      span unique iOS App Store apps. Some of them:
+  .col-lg-3.col-sm-0
+
+.row.text-center
+  div id='react-slider'
+  br
+  p.important-text You can start tracking discounts yourself. Just:
+  a href="#{@app_store_link}"
+    = image_tag "app_store_button.svg", width: "200px", alt: "Download Smart Wishlist on the iOS App Store"
+  br
+  br
+  p.important-text How it works:
+  script async="" src="https://fast.wistia.com/embed/medias/f18hi4r9xi.jsonp"
+  .row.text-center.row-vertical-space
+    .col-md-4.col-sm-1
+    .col-md-4.col-sm-10
+      .text-center
+        video controls="" style="width: 90%;"
+          source src="https://host.apki.io/wishlist_intro.mp4" type="video/mp4"
+          | Your browser does not support the video tag.
+    .col-md-4.col-sm-1
+
+  .row.text-center.row-vertical-space
+  .col-md-3.col-sm-6
+    .thumbnail
+      = image_tag "wishlist_1.jpg", alt: "Cool but pricey app?"
+  .col-md-3.col-sm-6
+    .thumbnail
+      = image_tag "wishlist_2.jpg", alt: "Add it to Smart Wishlist"
+  .col-md-3.col-sm-6
+    .thumbnail
+      = image_tag "wishlist_3.jpg", alt: "You will know when there is a price drop"
+  .col-md-3.col-sm-6
+    .thumbnail
+      = image_tag "wishlist_4.jpg", alt: "Save your money!"
+footer
+  .row.bottom-25
+    .col-lg-12
+      a href="https://pawelurbanek.com" target="_blank" Paweł Urbanek &copy; 2018
