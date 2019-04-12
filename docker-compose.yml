@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  redis:
+    image: redis:alpine
+    ports:
+      - '6379:6379'
+  postgres:
+    image: postgres:10.3-alpine
+    env_file:
+      - .env.development.database
+    ports:
+      - '5432:5432'
+    volumes:
+      - wishlist_db_data:/var/lib/postgresql/data
+
+volumes:
+  wishlist_db_data:
+

@@ -39,7 +39,7 @@
     "watch": "npm test -- --watch"
   },
    "engines": {
-    "node": ">=8.x",
+    "node": "10.x",
     "yarn": "1.x"
   }
 }
