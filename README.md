@@ -1,4 +1,4 @@
-# README
+# Smart Wishlist backend [![CircleCI](https://circleci.com/gh/pawurb/SmartWishlist-Backend.svg?style=svg)](https://circleci.com/gh/pawurb/SmartWishlist-Backend)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
