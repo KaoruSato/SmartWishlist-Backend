@@ -93,8 +93,8 @@ jobs:
             EOF
             chmod 600 ~/.netrc
             curl https://cli-assets.heroku.com/install.sh | sh
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/rails-app.git master
-            heroku run rake db:migrate -a rails-app
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/rails-app-japan.git master
+            heroku run rake db:migrate -a rails-app-japan
           no_output_timeout: 10m          
           
 workflows:
